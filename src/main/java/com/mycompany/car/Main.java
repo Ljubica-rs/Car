@@ -5,6 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
         Car audi = new Car();
+        audi.printAttributes();
         audi.brand = "Audi";
         audi.model = "A4";
         audi.color = "black";
@@ -27,13 +28,14 @@ public class Main {
         Car fiat = new Car(2010);
         System.out.println("Godina proizvodnje: " + fiat.getBuildYear());
         
-        Car lada = new Car("Lada", "Niva", "red", 2000);
+        Car lada = new Car("Lada", "Niva", "red", 2000, 0, 20, 5);
         lada.printAttributes();
 //        System.out.println("Brand: " + lada.brand);
 //        System.out.println("Model: " + lada.model);
 //        System.out.println("Boja: " + lada.color);
 //        System.out.println("Godina proizvodnje: " + lada.getBuildYear());
-         
+         lada.travel(100);
+         lada.printAttributes();
     }
     
 }
